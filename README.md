@@ -31,4 +31,5 @@ Als letztes müsst Ihr noch die Datei /etc/nginx/sites-available/ispconfig.vhost
 Mehr Infos:
 
 https://www.adminer.org/plugins/#use
+
 https://www.ispconfig.org
