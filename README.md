@@ -1,11 +1,12 @@
 # Adminer ISPConfig 3 Plugin
 
-Authenticate and auto-check host by ISPConfig Remote API
+Automatische Anmeldung via ISPConfig Remote API
 
-Your ISPConfig Remote User needs the following functions:
+Der ISPConfig Remote User braucht folgende Rechte:
 
-Sites database functions
-Server functions
+        - Seiten Rechte
+        - Server Rechte
+        - Datenbank Rechte
 
 In Datei /plugins/AdminerISPConfig.php muss ab Zeile 32 folgendes angepasst werden:
 
@@ -18,16 +19,16 @@ Im letzten Fall (check_ssl) steht "true" für eine trusted Zertifikat und "false
 
 Einrichten unter Ubuntu oder Debian:
 
-cd /usr/share
-git clone https://github.com/SpeedWP/adminer.git
-cd adminer
-wget https://www.adminer.org/latest-de.php
-mv latest-de.php adminer.php
-
-
+        cd /usr/share
+        git clone https://github.com/SpeedWP/adminer.git
+        cd adminer
+        wget https://www.adminer.org/latest-de.php
+        mv latest-de.php adminer.php
+        chmod -Rf 755 /usr/share/adminer/
+        
 Als letztes müsst Ihr noch die Datei /etc/nginx/sites-available/ispconfig.vhost ergänzen. Dazu einfach den kompletten Inhalt von Adminer.conf nach /etc/nginx/sites-available/ispconfig.vhost kopieren.
 
-More info:
+Mehr Infos:
 
 https://www.adminer.org/plugins/#use
 https://www.ispconfig.org
