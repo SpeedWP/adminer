@@ -19,9 +19,11 @@ Im letzten Fall (check_ssl) steht "true" für eine trusted Zertifikat und "false
 Einrichten unter Ubuntu oder Debian:
 
 cd /usr/share
-git clone 
-wget https://www.adminer.org/latest-de.php adminer.php
+git clone https://github.com/SpeedWP/adminer.git
+cd adminer
+wget https://www.adminer.org/latest-de.php
 mv latest-de.php adminer.php
+
 
 Als letztes müsst Ihr noch die Datei /etc/nginx/sites-available/ispconfig.vhost ergänzen. Dazu einfach den kompletten Inhalt von Adminer.conf nach /etc/nginx/sites-available/ispconfig.vhost kopieren.
 
